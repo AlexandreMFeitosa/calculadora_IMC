@@ -1,0 +1,156 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+
+body {
+    background-color: #090e22;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+}
+
+.hide {
+    display: none !important;
+}
+
+.container {
+    min-width: 400px;
+    min-height: 400px;
+    background-color: #1d1e33;
+    padding: 2rem;
+
+}
+
+/* IMC Form */
+#calc-container h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form-inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Faz com que use a largura maxima */
+    margin-bottom: 1rem;
+}
+
+.form-control label {
+    font-weight: bold;
+    margin-bottom: 0.6rem;
+    color: #ccc;
+}
+.form-control input {
+    padding: 1rem 0.5rem; /*Padding mais em cima e em baixo e menos nas laterais*/
+}
+
+.action-control {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.action-control button , #back-btn {
+    padding: 1rem 1.5rem;
+    background-color: rgb(243, 21, 21);
+    flex: 1;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase; /*Transforma o texto em caixa alta*/
+    opacity: 0.9;
+}
+
+button:hover {
+    opacity: 1; /* Deixa os botoes com um brilho ao passar o mouse*/
+}
+
+#clear-btn {
+    background-color: #444;
+}
+
+/* Table */
+
+#result-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#imc-number {
+    font-size: 2.4rem;
+    margin-bottom: 0.6rem;
+}
+
+#imc-info {
+    color: #ccc;
+
+}
+
+#result-container h3 {
+    margin-top: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+#imc-table {
+    margin: 1.5rem 0;
+    font-size: 0.8rem;
+}
+
+.table-header {
+    font-weight: bold;
+    color: #ccc;
+}
+
+.table-header , .table-data {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: .5rem;
+    margin-bottom: .5rem;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+.table-header h4 , .table-data p {
+    flex: 1;
+    padding-left: 1rem;
+}
+
+/* A coluna 3 ( obesidade ) terá um tamanho de preeenchimento menor, assim as outras colunas terá mais espaço, pois tem mais informaçoes*/
+
+.table-header h4:nth-child(3) ,
+.table-data p:nth-child(3) {
+    max-width: 80px;
+}
+
+#back-btn {
+    align-self: center; /*Vai centralizar para o tamanho determinado no flex*/
+}
+
+.good {
+   color: #12db12;
+}
+
+.low {
+    color: #bdce12;
+}
+
+.medium {
+    color: #db6212;
+}
+
+.high {
+    columns: #db1912;
+}
